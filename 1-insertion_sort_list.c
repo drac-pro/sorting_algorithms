@@ -12,7 +12,7 @@ void insertion_sort_list(listint_t **list)
 
 	if (list == NULL || *list == NULL  || current == NULL)
 		return;
-	while (current)
+	for (; current; current = next)
 	{
 		next = current->next;
 		prev = current->prev;
@@ -21,7 +21,6 @@ void insertion_sort_list(listint_t **list)
 			swap_nodes(list, &prev, current);
 			print_list((const listint_t *)*list);
 		}
-		current = next;
 	}
 
 }
