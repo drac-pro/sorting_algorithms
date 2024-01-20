@@ -8,11 +8,11 @@ void swap_nodes(listint_t **h, listint_t **n1, listint_t *n2);
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *prev, *next, *current = (*list)->next;
+	listint_t *prev, *next, *current;
 
-	if (list == NULL || *list == NULL  || current == NULL)
+	if (list == NULL || *list == NULL  || (*list)->next == NULL)
 		return;
-	for (; current; current = next)
+	for (current = (*list)->next; current; current = next)
 	{
 		next = current->next;
 		prev = current->prev;
