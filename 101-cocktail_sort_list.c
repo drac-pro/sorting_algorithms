@@ -17,6 +17,8 @@ void cocktail_sort_list(listint_t **list)
 	{
 		swapped = 0;
 		current = lb;
+		if (lb == ub)
+			break;
 		while (current->next != ub)
 		{
 			if (current->n > current->next->n)
@@ -52,7 +54,7 @@ void cocktail_sort_list(listint_t **list)
 /**
  * swap_nodes - swaps two nodes in a doubly linked list
  *
- * @h: head of the list
+ * @list: head of the list
  * @n1: pointer to a node
  * @n2: pointer to another node
  */
