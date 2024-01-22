@@ -3,6 +3,7 @@
 /**
  * counting_sort - sorts an array ussing counting sort
  *
+ * @array: the array
  * @size: sie of the array
  */
 void counting_sort(int *array, size_t size)
